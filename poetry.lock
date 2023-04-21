@@ -125,6 +125,30 @@ files = [
 frozenlist = ">=1.1.0"
 
 [[package]]
+name = "ape-alchemy"
+version = "0.6.1"
+description = "ape-alchemy: Alchemy provider plugins"
+category = "main"
+optional = false
+python-versions = ">=3.8,<3.11"
+files = [
+    {file = "ape-alchemy-0.6.1.tar.gz", hash = "sha256:aa43b6f5b76659c6ecbf5e4bf8c1e17d71ef592c3a0512372b8e7b7e402e97c0"},
+    {file = "ape_alchemy-0.6.1-py3-none-any.whl", hash = "sha256:ac0d9ff09758c717466664e2be2a9c45c33f9fc3e597a654799606faed22c618"},
+]
+
+[package.dependencies]
+eth-ape = ">=0.6.5,<0.7"
+requests = "*"
+web3 = "*"
+
+[package.extras]
+dev = ["IPython", "Sphinx (>=4.4.0,<5.0)", "ape-arbitrum", "ape-optimism", "ape-polygon", "black (>=22.12.0)", "commitizen", "flake8 (>=5.0.4)", "flake8-breakpoint (>=1.1.0)", "flake8-print (>=4.0.0)", "hypothesis (>=6.2.0,<7.0)", "ipdb", "isort (>=5.10.1)", "mdformat (>=0.7.16)", "mdformat-frontmatter (>=0.4.1)", "mdformat-gfm (>=0.3.5)", "mypy (>=0.991)", "myst-parser (>=0.17.0,<0.18)", "pre-commit", "pytest (>=6.0)", "pytest-cov", "pytest-mock", "pytest-watch", "pytest-xdist", "setuptools", "sphinx-click (>=3.1.0,<4.0)", "sphinx-rtd-theme (>=1.0.0,<2)", "sphinxcontrib-napoleon (>=0.7)", "twine", "types-requests", "types-setuptools", "wheel"]
+doc = ["Sphinx (>=4.4.0,<5.0)", "myst-parser (>=0.17.0,<0.18)", "sphinx-click (>=3.1.0,<4.0)", "sphinx-rtd-theme (>=1.0.0,<2)", "sphinxcontrib-napoleon (>=0.7)"]
+lint = ["black (>=22.12.0)", "flake8 (>=5.0.4)", "flake8-breakpoint (>=1.1.0)", "flake8-print (>=4.0.0)", "isort (>=5.10.1)", "mdformat (>=0.7.16)", "mdformat-frontmatter (>=0.4.1)", "mdformat-gfm (>=0.3.5)", "mypy (>=0.991)", "types-requests", "types-setuptools"]
+release = ["setuptools", "twine", "wheel"]
+test = ["ape-arbitrum", "ape-optimism", "ape-polygon", "hypothesis (>=6.2.0,<7.0)", "pytest (>=6.0)", "pytest-cov", "pytest-mock", "pytest-xdist"]
+
+[[package]]
 name = "appnope"
 version = "0.1.3"
 description = "Disable App Nap on macOS >= 10.9"
@@ -3397,4 +3421,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10,<3.11"
-content-hash = "95b16008fa03cd8b03890933f9e8e0877c87473168dfebb8e47d05eff44abd07"
+content-hash = "bba452edc85e9702b050c47a05052fd8b57e33088673a38feac75c0de9603c7d"

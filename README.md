@@ -29,6 +29,7 @@ cd ape-simple-storage-v23
 
 ```bash
 poetry install 
+poetry run ape plugins install alchemy vyper
 ```
 
 3. Run unit tests
@@ -36,3 +37,48 @@ poetry install
 ```
 poetry run pytest
 ```
+
+# Usage
+
+## Testnet - Sepolia 
+
+1. Import an account
+
+To import an account into ape, run the following:
+
+```bash
+poetry run ape accounts import default
+```
+
+Where `default` will be the name of your account. Ape will then prompt you for your private key and password, and encrypt it on your computer. The only way to use this key moving forward will be to decrypt the key with your password. 
+
+See [this faucet](https://faucets.chain.link/) for testnet tokens. 
+
+2.  Set your RPC_URL
+
+Since we are working with Alchemy, create an [environment variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html) called `WEB3_ALCHEMY_PROJECT_ID` or `WEB3_ALCHEMY_API_KEY`. If using a linux or mac environment, you can set it by running:
+
+```
+export WEB3_ALCHEMY_PROJECT_ID=MY_API_TOKEN
+```
+
+3. Run your script!
+
+```
+poetry run ape run scripts/deploy_simple_storage.py --network ethereum:sepolia:alchemy
+```
+
+
+## Staging Tests
+
+🛑 **WARNING** 🛑
+*Run staging tests sparingly!* 
+
+To run staging tests, after running the above run:
+
+```
+poetry run pytest  -m "staging" --network ethereum:sepolia:alchemy --wallet-password <YOUR_DEFAULT_WALLET_PASSWORD> -s
+```
+
+This will test your contracts on a testnet.
+

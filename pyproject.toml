@@ -10,6 +10,7 @@ packages = [{include = "ape_simple_storage_v23"}]
 python = "^3.10,<3.11"
 eth-ape = "^0.6.8"
 titanoboa = {git = "https://github.com/vyperlang/titanoboa"}
+ape-alchemy = "^0.6.1"
 
 
 [build-system]
